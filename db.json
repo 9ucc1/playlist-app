@@ -1,7 +1,29 @@
 {
-    "songs": [
-        {"id": 1, "name": "hi"},
-        {"id": 2, "name": "uh"},
-        {"id": 3, "name": "third"}
-    ]
+  "songs": [
+    {
+      "id": 1,
+      "title": "hi",
+      "artist": "ehhe"
+    },
+    {
+      "id": 2,
+      "title": "uh",
+      "artist": "ehhe"
+    },
+    {
+      "id": 3,
+      "title": "third",
+      "artist": "ehhe"
+    },
+    {
+      "title": "titlehere",
+      "artist": "artisthere",
+      "id": 4
+    },
+    {
+      "title": "Oblivion",
+      "artist": "Grimes",
+      "id": 5
+    }
+  ]
 }
