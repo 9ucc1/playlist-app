@@ -20,28 +20,26 @@ function Library(){
         )
     }
 
-    function handleDeleteSong(event){
-        console.log(event)
+    function handleDeleteSong(deletedSong){
+        const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
+        setSongs(updatedSongs)
     }
 
+    //be able to sort songs by artist or title?
     return (
 
         <div>
-            library renders all songs added from form, 
-            fetch request from dbjson
+            here are all of your saved songs!
             {songs.map(song=>{
             return (<>
             <SongCard 
+                key={song.id}
+                song={song}
                 id={song.id} 
                 title={song.title} 
                 artist={song.artist}
+                onDeleteSong={handleDeleteSong}
             />
-            <button>
-                add to playlist
-            </button>
-            <button onClick={handleDeleteSong}>
-                remove from library
-            </button>
             </>
             )})}
         </div>

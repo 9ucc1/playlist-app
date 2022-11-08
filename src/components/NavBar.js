@@ -24,7 +24,7 @@ function NavBar(){
                 Home
             </NavLink>
             <NavLink
-                to="/library"
+                to="/songs"
                 exact
                 style={linkStyles}
                 activeStyle={{
@@ -44,7 +44,7 @@ function NavBar(){
                 Playlist
             </NavLink>
             <NavLink
-                to="/songform"
+                to="/songs/new"
                 exact
                 style={linkStyles}
                 activeStyle={{

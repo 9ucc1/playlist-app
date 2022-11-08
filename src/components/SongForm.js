@@ -14,6 +14,7 @@ function handleArtistChange(event){
     setArtist(event.target.value)
 }
 
+//patch request to edit in/out of playlist? or maybe just favorited songs?
 function handlePlaylistChange(event){
     setPlaylist(event.target.checked)
     console.log(playlist)

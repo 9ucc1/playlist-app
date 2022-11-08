@@ -6,16 +6,18 @@ import Library from './Library.js'
 import SongForm from './SongForm.js'
 import Playlist from './Playlist.js'
 
+//make an error route, page does not exist
+
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/library">
-          <Library/>
-        </Route>
-        <Route path="/songform">
+        <Route path="/songs/new">
           <SongForm/>
+        </Route>
+        <Route path="/songs">
+          <Library/>
         </Route>
         <Route path="/playlist">
           <Playlist/>
