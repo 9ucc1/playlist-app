@@ -3,22 +3,51 @@
     {
       "id": 1,
       "title": "hi",
-      "artist": "ehhe"
+      "artist": "ehhe",
+      "playlistStatus": true,
+      "image": ""
     },
     {
       "id": 2,
       "title": "uh",
-      "artist": "ehhe"
+      "artist": "ehhe",
+      "playlistStatus": false,
+      "image": ""
     },
     {
       "id": 3,
       "title": "third",
-      "artist": "ehhe"
+      "artist": "ehhe",
+      "playlistStatus": false,
+      "image": "https://cdn4.iconfinder.com/data/icons/button-1/100/27-128.png"
+    },
+    {
+      "title": "playlist",
+      "artist": "test",
+      "playlistStatus": true,
+      "id": 4,
+      "image": ""
+    },
+    {
+      "title": "test2",
+      "artist": "test2",
+      "playlistStatus": true,
+      "id": 5,
+      "image": ""
     },
     {
       "title": "titlehere",
       "artist": "artisthere",
-      "id": 4
+      "playlistStatus": false,
+      "id": 6,
+      "image": ""
+    },
+    {
+      "title": "d",
+      "artist": "d",
+      "image": "",
+      "playlistStatus": false,
+      "id": 7
     }
   ]
 }

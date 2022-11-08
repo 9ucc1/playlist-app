@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import SongCard from './SongCard.js'
+import DeleteButton from './DeleteButton.js'
 
 function Library(){
 
@@ -29,19 +30,23 @@ function Library(){
     return (
 
         <div>
-            here are all of your saved songs!
-            {songs.map(song=>{
-            return (<>
+            here are all of your saved songs! add button that adds to playlist
+            {songs.map(song=>
+            (<>
             <SongCard 
                 key={song.id}
                 song={song}
-                id={song.id} 
+                id={song.id}
                 title={song.title} 
                 artist={song.artist}
+                image={song.image}
+            />
+            <DeleteButton 
+                song={song}
                 onDeleteSong={handleDeleteSong}
             />
             </>
-            )})}
+            ))}
         </div>
     )
 }

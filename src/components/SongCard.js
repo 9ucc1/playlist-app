@@ -1,20 +1,19 @@
 import React from 'react'
 
-function SongCard({ song, id, title, artist, onDeleteSong }){
+function SongCard({ song, title, artist, image }){
 
-    function handleSongcardDelete(){
-        fetch(`http://localhost:3003/songs/${song.id}`, {
-            method: "DELETE",
-        })
-        .then(r=>r.json())
-        .then(()=>onDeleteSong(song))
-        alert("song deleted!")
-  }
+    function handlePlaylistPatch(){
+        console.log("clicked")
+        //if playlistStatus=true, then button should show "remove from playlist"
+        //update state uhghghgh
+    }
 
     return (
         <div>
-            song {id} name: {title} artist: {artist}
-            <button onClick={handleSongcardDelete}>Delete Song</button>
+            <h3>name: {title}</h3>
+            <h3>artist: {artist}</h3>
+            <img src={image}></img>
+            <button onClick={handlePlaylistPatch}>add/delete from playlist</button>
         </div>
     )
 }
