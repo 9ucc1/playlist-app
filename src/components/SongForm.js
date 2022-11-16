@@ -3,11 +3,15 @@ import React, { useState } from 'react'
 function SongForm(){
 
 //find out how to do default image: https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png
+//BLOG POST ABT MAKING THIS ONE FUNCTION? FORM FILLER OUTER? use plantsy example
 
-const [title, setTitle] = useState("")
+//const [title, setTitle] = useState("")
 const [artist, setArtist] = useState("")
 const [image, setImage] = useState("")
 const [playlistStatus, setPlaylistStatus] = useState(false)
+
+
+const [title, setTitle] = useState("")
 
 function handleTitleChange(event){
     setTitle(event.target.value)
@@ -40,46 +44,46 @@ function handleSubmit(event){
     setArtist("")
     alert("added song!")
 }
+//form here to post to dbjson,
+//new song, artist, album art with default option
+//goes into LIBRARY, maybe checkboxes to add to playlist too?
 
 return(
-    <div>form here to post to dbjson,
-        new song, artist, album art with default option
-        goes into LIBRARY, maybe checkboxes to add to playlist too?
-        <form>
-            <label> Title:
-                <input 
-                    type="text" 
-                    value={title} 
-                    onChange={handleTitleChange}
-                    placeholder="enter text"
-                />
-            </label>
-            <label> Artist:
-                <input 
-                    type="text" 
-                    value={artist} 
-                    onChange={handleArtistChange}
-                    placeholder="enter text"
-                />
-            </label>
-            <label> Image URL:
-                <input 
-                    type="text" 
-                    value={image} 
-                    onChange={handleImageChange}
-                    placeholder="enter url"
-                />
-            </label>
-            <label>Add to playlist too?</label>
-      <input
-        type="checkbox"
-        onChange={handlePlaylistChange}
-        checked={playlistStatus}
-      />
-            <button type="submit" onClick={handleSubmit}>Add to Library</button>
-        </form>
-    </div>
+    <form>
+        <label> Title:
+            <input 
+                type="text" 
+                value={title} 
+                onChange={handleTitleChange}
+                placeholder="enter text"
+            />
+        </label>
+        <label> Artist:
+            <input 
+                type="text" 
+                value={artist} 
+                onChange={handleArtistChange}
+                placeholder="enter text"
+            />
+        </label>
+        <label> Image URL:
+            <input 
+                type="text" 
+                value={image} 
+                onChange={handleImageChange}
+                placeholder="enter url"
+            />
+        </label>
+        <label>Add to playlist too?</label>
+        <input
+            type="checkbox"
+            onChange={handlePlaylistChange}
+            checked={playlistStatus}
+        />
+        <button type="submit" onClick={handleSubmit}>Add to Library</button>
+    </form>
 )
+
 }
 
 export default SongForm
