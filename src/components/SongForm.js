@@ -1,17 +1,27 @@
 import React, { useState } from 'react'
 
+const initialNewSong = {
+    title: "",
+    artist: "",
+    image: "",
+}
 function SongForm(){
 
 //find out how to do default image: https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png
-//BLOG POST ABT MAKING THIS ONE FUNCTION? FORM FILLER OUTER? use plantsy example
 
-//const [title, setTitle] = useState("")
+const [newSong, setNewSong] = useState(initialNewSong)
+console.log(newSong)
+
+const [title, setTitle] = useState("")
 const [artist, setArtist] = useState("")
 const [image, setImage] = useState("")
 const [playlistStatus, setPlaylistStatus] = useState(false)
 
-
-const [title, setTitle] = useState("")
+function handleChange(event){
+    setNewSong((currentSongState)=> (
+        {...currentSongState, [event.target.name]: event.target.value}
+    ))
+}
 
 function handleTitleChange(event){
     setTitle(event.target.value)
@@ -31,17 +41,16 @@ function handlePlaylistChange(event){
 
 function handleSubmit(event){
     event.preventDefault()
-    const formData = { title: title, artist: artist, image: image, playlistStatus: playlistStatus}
-    console.log(formData)
+    const formData = 
+    { title: newSong.title, artist: newSong.artist, image: newSong.image, playlistStatus: playlistStatus}
     fetch('http://localhost:3003/songs',{
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(formData),
     })
     .then(r=>r.json())
-    .then(newSong=>console.log("posted:", newSong))
-    setTitle("")
-    setArtist("")
+    .then(song=>console.log("posted:", song))
+    setNewSong(initialNewSong)
     alert("added song!")
 }
 //form here to post to dbjson,
@@ -53,30 +62,34 @@ return(
         <label> Title:
             <input 
                 type="text" 
-                value={title} 
-                onChange={handleTitleChange}
+                name="title"
+                value={newSong.title} 
+                onChange={handleChange}
                 placeholder="enter text"
             />
         </label>
         <label> Artist:
             <input 
                 type="text" 
-                value={artist} 
-                onChange={handleArtistChange}
+                name="artist"
+                value={newSong.artist} 
+                onChange={handleChange}
                 placeholder="enter text"
             />
         </label>
         <label> Image URL:
             <input 
-                type="text" 
-                value={image} 
-                onChange={handleImageChange}
+                type="text"
+                name="image"
+                value={newSong.image} 
+                onChange={handleChange}
                 placeholder="enter url"
             />
         </label>
         <label>Add to playlist too?</label>
         <input
             type="checkbox"
+            name="playlistStatus"
             onChange={handlePlaylistChange}
             checked={playlistStatus}
         />
