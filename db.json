@@ -2,10 +2,10 @@
   "songs": [
     {
       "id": 1,
-      "title": "hi",
-      "artist": "ehhe",
+      "title": "Psycho Killer",
+      "artist": "Talking Heads",
       "playlistStatus": true,
-      "image": ""
+      "image": "https://images.genius.com/aa88b8cf56e967839ff77ce45aa6fd42.1000x1000x1.jpg"
     },
     {
       "id": 2,
@@ -88,6 +88,20 @@
       "artist": "test",
       "image": "test",
       "id": 13
+    },
+    {
+      "title": "oblivion",
+      "artist": "grime",
+      "image": "hh",
+      "playlistStatus": true,
+      "id": 14
+    },
+    {
+      "title": "ohno",
+      "artist": "hono",
+      "image": "hh",
+      "playlistStatus": true,
+      "id": 15
     }
   ]
 }

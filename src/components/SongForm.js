@@ -5,25 +5,19 @@ const initialNewSong = {
     artist: "",
     image: "",
 }
+
 function SongForm(){
 
 //find out how to do default image: https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png
 
 const [newSong, setNewSong] = useState(initialNewSong)
-console.log(newSong)
 
-const [title, setTitle] = useState("")
-const [artist, setArtist] = useState("")
-const [image, setImage] = useState("")
+//const [title, setTitle] = useState("")
+//const [artist, setArtist] = useState("")
+//const [image, setImage] = useState("")
 const [playlistStatus, setPlaylistStatus] = useState(false)
 
-function handleChange(event){
-    setNewSong((currentSongState)=> (
-        {...currentSongState, [event.target.name]: event.target.value}
-    ))
-}
-
-function handleTitleChange(event){
+/*function handleTitleChange(event){
     setTitle(event.target.value)
 }
 
@@ -33,6 +27,12 @@ function handleArtistChange(event){
 
 function handleImageChange(event){
     setImage(event.target.value)
+}*/
+
+function handleChange(event){
+    setNewSong((currentSongState)=> (
+        {...currentSongState, [event.target.name]: event.target.value}
+    ))
 }
 
 function handlePlaylistChange(event){
@@ -41,8 +41,11 @@ function handlePlaylistChange(event){
 
 function handleSubmit(event){
     event.preventDefault()
-    const formData = 
-    { title: newSong.title, artist: newSong.artist, image: newSong.image, playlistStatus: playlistStatus}
+    const formData = { 
+        title: newSong.title, 
+        artist: newSong.artist, 
+        image: newSong.image, 
+        playlistStatus: playlistStatus}
     fetch('http://localhost:3003/songs',{
         method: "POST",
         headers: {"Content-Type": "application/json"},
@@ -61,37 +64,29 @@ return(
     <form>
         <label> Title:
             <input 
-                type="text" 
-                name="title"
-                value={newSong.title} 
-                onChange={handleChange}
+                type="text" name="title" 
+                value={newSong.title} onChange={handleChange}
                 placeholder="enter text"
             />
         </label>
         <label> Artist:
             <input 
-                type="text" 
-                name="artist"
-                value={newSong.artist} 
-                onChange={handleChange}
+                type="text" name="artist"
+                value={newSong.artist} onChange={handleChange}
                 placeholder="enter text"
             />
         </label>
         <label> Image URL:
             <input 
-                type="text"
-                name="image"
-                value={newSong.image} 
-                onChange={handleChange}
+                type="text" name="image"
+                value={newSong.image} onChange={handleChange}
                 placeholder="enter url"
             />
         </label>
         <label>Add to playlist too?</label>
         <input
-            type="checkbox"
-            name="playlistStatus"
-            onChange={handlePlaylistChange}
-            checked={playlistStatus}
+            type="checkbox" name="playlistStatus"
+            checked={playlistStatus} onChange={handlePlaylistChange} 
         />
         <button type="submit" onClick={handleSubmit}>Add to Library</button>
     </form>

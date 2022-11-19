@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import SongCard from './SongCard.js'
 import DeleteButton from './DeleteButton.js'
+import styled from 'styled-components'
 
 function Library(){
+    const Wrapper = styled.section`
+    padding: 4em;
+    background: lightgray;
+  `;
 
     const [isLoaded, setIsLoaded] = useState(false)
     const [songs, setSongs] = useState([])
@@ -32,7 +37,7 @@ function Library(){
         <div>
             here are all of your saved songs! add button that adds to playlist
             {songs.map(song=>
-            (<>
+            (<Wrapper>
             <SongCard 
                 key={song.id}
                 song={song}
@@ -45,7 +50,7 @@ function Library(){
                 song={song}
                 onDeleteSong={handleDeleteSong}
             />
-            </>
+            </Wrapper>
             ))}
         </div>
     )
