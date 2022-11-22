@@ -52,7 +52,7 @@ function handleSubmit(event){
 
 return(
     <form>
-        <FormHeader>Add Song</FormHeader>
+        <p>add song</p>
         <h3>Title: 
             <input 
                 type="text" name="title" 

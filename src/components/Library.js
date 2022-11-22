@@ -6,7 +6,7 @@ import styled from 'styled-components'
 function Library(){
     const Wrapper = styled.section`
     padding: 1em;
-    background: lightgray;
+    background: blanchedalmond;
   `;
 
     const [isLoaded, setIsLoaded] = useState(false)
@@ -35,7 +35,8 @@ function Library(){
     return (
 
         <div>
-            here are all of your saved songs! add button that adds to playlist
+            <p>here are all of your saved songs! 
+                from here, add to your playlist or delete from library.</p>
             {songs.map(song=>
             (<Wrapper>
             <SongCard 

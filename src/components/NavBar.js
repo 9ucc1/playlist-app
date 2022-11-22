@@ -5,7 +5,7 @@ const linkStyles = {
     width: "100px",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "blue",
+    background: "dimgray",
     textDecoration: "none",
     color: "white",
   };
@@ -18,7 +18,8 @@ function NavBar(){
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: "darkblue",
+                    background: "white",
+                    color: "cadetblue",
                   }}
             >
                 Home
@@ -28,7 +29,8 @@ function NavBar(){
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: "darkblue",
+                    background: "white",
+                    color: "cadetblue",
                   }}
             >
                 Library
@@ -38,7 +40,8 @@ function NavBar(){
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: "darkblue",
+                    background: "white",
+                    color: "cadetblue",
                   }}
             >
                 Playlist
@@ -48,7 +51,8 @@ function NavBar(){
                 exact
                 style={linkStyles}
                 activeStyle={{
-                    background: "darkblue",
+                    background: "white",
+                    color: "cadetblue",
                   }}
             >
                 Add Song

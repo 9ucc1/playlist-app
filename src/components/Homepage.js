@@ -2,19 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 
 function Homepage(){
-    const Wrapper = styled.section`
+    const Wrapper = styled.p`
     padding: 1em;
     background: lightgray;
-    width: 500px;
-    `;
-    const Outside = styled.p`
-    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
     `;
 
     return (
         <Wrapper>
             Welcome to the Playlist Builder! Upload a song by clicking Add Song,
-            or browse the existing library to customize your own playlist!
+            or browse the existing library to customize your own playlist.
         </Wrapper>
     )
 }
