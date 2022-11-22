@@ -10,16 +10,26 @@ function SongCard({ song, title, artist, image }){
 
     function handlePlaylistPatch(){
         console.log("clicked")
+        //patch request
         //if playlistStatus=true, then button should show "remove from playlist"
         //update state uhghghgh
+        fetch(`http://localhost:3003/songs/${song.id}`,{
+            method: "PATCH",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+            playlistStatus: !song.playlistStatus,
+            })
+        })
+        .then((r)=>r.json())
+        .then((r)=>console.log(r))
     }
 
     return (
         <div>
             <img src={image}></img>
-            <h3>name: {title}</h3>
-            <h3>artist: {artist}</h3>
-            <button onClick={handlePlaylistPatch}>add/delete from playlist</button>
+            <h3>Title: {title}</h3>
+            <h3>Artist: {artist}</h3>
+            <button onClick={handlePlaylistPatch}>{song.playlistStatus ? "Remove From" : "Add to"} Playlist</button>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 function Library(){
     const Wrapper = styled.section`
-    padding: 4em;
+    padding: 1em;
     background: lightgray;
   `;
 
