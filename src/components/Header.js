@@ -8,6 +8,7 @@ function Header(){
     font-size: 1.5em;
     text-align: center;
     color: white;
+    font-family: "Lucida Console", "Courier New", monospace;
   `;
   const Wrapper = styled.section`
   padding: 4em;

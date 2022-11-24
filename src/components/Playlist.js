@@ -3,16 +3,21 @@ import SongCard from './SongCard.js'
 import styled from "styled-components"
 
 function Playlist(){
+
     const Wrapper = styled.p`
     padding: 1em;
     background: white;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 400px;
+    margin-right: 400px;
     border: solid;
+    border-color: lightgray;
   `;
     const Background = styled.div`
-    background: darksalmon;
+    background: blanchedalmond;
     `;
+    const Header = styled.h3`
+    font-family: "Lucida Console", "Courier New", monospace;
+    `
 
     const [isLoaded, setIsLoaded] = useState(false)
     const [songs, setSongs] = useState([])
@@ -36,9 +41,8 @@ function Playlist(){
     //const playlistSongs = songs.filter(song=>song.playlistStatus === true)
     
     return(
-        <>
-            <p>here is your playlist</p>
-            <Background>
+        <Background>
+            <Header>My Playlist</Header>
             {songs.map(song=>(
                 <Wrapper>
                     <SongCard 
@@ -52,8 +56,7 @@ function Playlist(){
                     />
                 </Wrapper>
             ))}
-            </Background>
-        </>
+        </Background>
     )
 }
 

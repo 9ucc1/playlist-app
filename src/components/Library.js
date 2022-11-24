@@ -4,9 +4,17 @@ import DeleteButton from './DeleteButton.js'
 import styled from 'styled-components'
 
 function Library(){
-    const Wrapper = styled.section`
+    const Background = styled.div`
+    background: darksalmon;
+    column-count: 3;
+    column-gap: 10px;
+    padding: 10px;
+    `
+    const Wrapper = styled.p`
     padding: 1em;
-    background: blanchedalmond;
+    background: white;
+    border: solid;
+    border-color: gray;
   `;
 
     const [isLoaded, setIsLoaded] = useState(false)
@@ -33,10 +41,7 @@ function Library(){
 
     //be able to sort songs by artist or title?
     return (
-
-        <div>
-            <p>here are all of your saved songs! 
-                from here, add to your playlist or delete from library.</p>
+        <Background>
             {songs.map(song=>
             (<Wrapper>
             <SongCard 
@@ -53,7 +58,7 @@ function Library(){
             />
             </Wrapper>
             ))}
-        </div>
+        </Background>
     )
 }
 export default Library

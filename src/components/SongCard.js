@@ -7,12 +7,13 @@ function SongCard({ song, title, artist, image }){
     padding: 4em;
     background: lightgray;
   `;
+    const Columns = styled.div`
+    column-count: 2;
+    text-align: left;
+    `
 
     function handlePlaylistPatch(){
         console.log("clicked")
-        //patch request
-        //if playlistStatus=true, then button should show "remove from playlist"
-        //update state uhghghgh
         fetch(`http://localhost:3003/songs/${song.id}`,{
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
@@ -25,12 +26,12 @@ function SongCard({ song, title, artist, image }){
     }
 
     return (
-        <div>
+        <Columns>
             <img src={image}></img>
             <h3>{title}</h3>
             <p>{artist}</p>
             <button onClick={handlePlaylistPatch}>{song.playlistStatus ? "Remove From" : "Add to"} Playlist</button>
-        </div>
+        </Columns>
     )
 }
 
