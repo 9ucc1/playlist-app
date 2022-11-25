@@ -17,6 +17,7 @@ function SongForm(){
     font-size: 1.5em;
     text-align: center;
     color: black;
+    padding-top: 150px;
     `;
 
 const [newSong, setNewSong] = useState(initialNewSong)
@@ -51,8 +52,9 @@ function handleSubmit(event){
 }
 
 return(
+    <>
+    <FormHeader>new song</FormHeader>
     <form>
-        <p>add a new song</p>
         <h3>Title: 
             <input 
                 type="text" name="title" 
@@ -83,6 +85,7 @@ return(
         <button type="submit" onClick={handleSubmit}>Add to Library</button>
         </Wrapper>
     </form>
+    </>
 )
 
 }

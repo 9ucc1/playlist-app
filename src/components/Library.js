@@ -6,9 +6,10 @@ import styled from 'styled-components'
 function Library(){
     const Background = styled.div`
     background: darksalmon;
-    column-count: 3;
+    column-count: 2;
     column-gap: 10px;
-    padding: 10px;
+    padding: 1em;
+    padding-top: 150px;
     `
     const Wrapper = styled.p`
     padding: 1em;
@@ -39,7 +40,6 @@ function Library(){
         setSongs(updatedSongs)
     }
 
-    //be able to sort songs by artist or title?
     return (
         <Background>
             {songs.map(song=>

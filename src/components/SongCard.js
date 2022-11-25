@@ -10,7 +10,10 @@ function SongCard({ song, title, artist, image }){
     const Columns = styled.div`
     column-count: 2;
     text-align: left;
-    `
+    `;
+    const Button = styled.button`
+    font-size: 12px;
+    `;
 
     function handlePlaylistPatch(){
         console.log("clicked")
@@ -30,7 +33,7 @@ function SongCard({ song, title, artist, image }){
             <img src={image}></img>
             <h3>{title}</h3>
             <p>{artist}</p>
-            <button onClick={handlePlaylistPatch}>{song.playlistStatus ? "Remove From" : "Add to"} Playlist</button>
+            <Button onClick={handlePlaylistPatch}>{song.playlistStatus ? "Remove From" : "Add to"} Playlist</Button>
         </Columns>
     )
 }

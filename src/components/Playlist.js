@@ -7,13 +7,15 @@ function Playlist(){
     const Wrapper = styled.p`
     padding: 1em;
     background: white;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: 30%;
+    margin-right: 30%;
+    min-width: 300px;
     border: solid;
     border-color: lightgray;
   `;
     const Background = styled.div`
     background: blanchedalmond;
+    padding-top: 150px;
     `;
     const Header = styled.h3`
     font-family: "Lucida Console", "Courier New", monospace;
