@@ -3,7 +3,7 @@ import SongCard from './SongCard.js'
 import DeleteButton from './DeleteButton.js'
 import styled from 'styled-components'
 
-function Library(){
+function Library( { onDeleteSong, onPlaylistChange}){
     const Background = styled.div`
     background: darksalmon;
     column-count: 2;
@@ -37,10 +37,10 @@ function Library(){
         )
     }
 
-    function handleDeleteSong(deletedSong){
+    /*function handleDeleteSong(deletedSong){
         const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
         setSongs(updatedSongs)
-    }
+    }*/
 
     return (
         <Background>
@@ -53,10 +53,11 @@ function Library(){
                 title={song.title} 
                 artist={song.artist}
                 image={song.image}
+                onPlaylistChange={onPlaylistChange}
             />
             <DeleteButton 
                 song={song}
-                onDeleteSong={handleDeleteSong}
+                onDeleteSong={onDeleteSong}
             />
             </Wrapper>
             ))}

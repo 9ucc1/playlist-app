@@ -11,7 +11,7 @@
       "id": 2,
       "title": "Oblivion",
       "artist": "Grimes",
-      "playlistStatus": false,
+      "playlistStatus": true,
       "image": "https://tse1.mm.bing.net/th?id=OIP.c181D1-r8jUDpFSsgBAyAAHaGo&pid=Api"
     },
     {
@@ -46,7 +46,7 @@
       "title": "Creep",
       "artist": "Radiohead",
       "image": "https://tse3.mm.bing.net/th?id=OIP.ZCaP2tXN0UZG8QIfAdLl3AHaHV&pid=Api",
-      "playlistStatus": false,
+      "playlistStatus": true,
       "id": 7
     },
     {
@@ -87,22 +87,22 @@
       "title": "KAZINO",
       "artist": "BIBI",
       "image": "https://tse3.mm.bing.net/th?id=OIP.bubj1PZ-zGruundg6CUxJAHaHa&pid=Api",
-      "playlistStatus": true,
+      "playlistStatus": false,
       "id": 15
     },
     {
       "title": "Pink Venom",
       "artist": "BLACKPINK",
-      "image": "https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.XZRM8XX9rM1C3-7xc7DgOQAAAA&pid=Api",
       "playlistStatus": false,
-      "id": 17
+      "id": 18
     },
     {
-      "title": "Pink Venom",
-      "artist": "BLACKPINK",
-      "image": "https://tse4.mm.bing.net/th?id=OIP.XZRM8XX9rM1C3-7xc7DgOQAAAA&pid=Api",
-      "playlistStatus": true,
-      "id": 18
+      "title": "test",
+      "artist": "test",
+      "image": "",
+      "playlistStatus": false,
+      "id": 19
     }
   ]
 }

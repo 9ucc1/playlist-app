@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function SongCard({ song, title, artist, image, onPlaylistChange }){
+function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemove }){
 
     const Wrapper = styled.section`
     padding: 4em;
@@ -25,7 +25,10 @@ function SongCard({ song, title, artist, image, onPlaylistChange }){
             })
         })
         .then((r)=>r.json())
-        .then((r)=>onPlaylistChange(r))
+        .then((changedSong)=>{
+            //onPlaylistChange(changedSong)
+            onPlaylistRemove(changedSong)
+        })
     }
 
     return (

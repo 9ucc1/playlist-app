@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import SongCard from './SongCard.js'
 import styled from "styled-components"
 
-function Playlist(){
+function Playlist( {songs, onPlaylistChange} ){
 
     const Wrapper = styled.p`
     padding: 1em;
@@ -22,7 +22,7 @@ function Playlist(){
     `
 
     const [isLoaded, setIsLoaded] = useState(false)
-    const [songs, setSongs] = useState([])
+    const [playlistSongs, setPlaylistSongs] = useState([])
 
     useEffect(()=>{
         fetch(`http://localhost:3003/songs/`)
@@ -30,7 +30,7 @@ function Playlist(){
         .then(response=>{
             const playlistTrue = response.filter(song=>song.playlistStatus === true)
             //setSongs(response)
-            setSongs(playlistTrue)
+            setPlaylistSongs(playlistTrue)
             setIsLoaded(true)
         })
     }, [])
@@ -40,9 +40,13 @@ function Playlist(){
         )
     }
 
-    function handlePlaylistRemove(removedSong){
-        const updatedSongs = songs.filter((song)=> song.id !== removedSong.id)
-        console.log(updatedSongs)
+    //const filteredSongs = songs.filter(song=>song.playlistStatus === true)
+    //const [playlistSongs, setPlaylistSongs] = useState(filteredSongs)
+
+    function handlePlaylistRemove(changedSong){
+        const updatedSongs = playlistSongs.filter((song)=> song.id !== changedSong.id)
+        setPlaylistSongs(updatedSongs)
+        alert("removed from playlist!")
     }
 
     //const playlistSongs = songs.filter(song=>song.playlistStatus === true)
@@ -50,7 +54,7 @@ function Playlist(){
     return(
         <Background>
             <Header>My Playlist</Header>
-            {songs.map(song=>(
+            {playlistSongs.map(song=>(
                 <Wrapper>
                     <SongCard 
                     song={song}
@@ -60,7 +64,8 @@ function Playlist(){
                     artist={song.artist}
                     image={song.image}
                     //playlistStatus={song.playlistStatus}
-                    onPlaylistChange={handlePlaylistRemove}
+                    //onPlaylistChange={onPlaylistChange}
+                    onPlaylistRemove={handlePlaylistRemove}
                     />
                 </Wrapper>
             ))}
