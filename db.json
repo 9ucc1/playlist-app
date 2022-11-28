@@ -11,7 +11,7 @@
       "id": 2,
       "title": "Oblivion",
       "artist": "Grimes",
-      "playlistStatus": true,
+      "playlistStatus": false,
       "image": "https://tse1.mm.bing.net/th?id=OIP.c181D1-r8jUDpFSsgBAyAAHaGo&pid=Api"
     },
     {
@@ -96,13 +96,6 @@
       "image": "https://tse4.mm.bing.net/th?id=OIP.XZRM8XX9rM1C3-7xc7DgOQAAAA&pid=Api",
       "playlistStatus": false,
       "id": 18
-    },
-    {
-      "title": "test",
-      "artist": "test",
-      "image": "",
-      "playlistStatus": false,
-      "id": 19
     }
   ]
 }

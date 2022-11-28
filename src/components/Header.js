@@ -4,23 +4,32 @@ import styled from 'styled-components'
 
 function Header(){
 
+    const Header = styled.header`
+        background-color: cadetblue;
+        min-height: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        width: 100%;
+        position: fixed;
+        text-align: center;
+    `;
+
     const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
-    font-family: "Lucida Console", "Courier New", monospace;
-  `;
-  const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
+        font-size: 1.5em;
+        text-align: center;
+        color: white;
+        font-family: "Lucida Console", "Courier New", monospace;
+    `;
 
     return(
         <>
-        <header className="App-header">
+        <Header>
         <Title>playlist builder 3000</Title>
             <NavBar />
-        </header>
+        </Header>
         </>
     )
 }

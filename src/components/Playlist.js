@@ -18,6 +18,7 @@ function Playlist( {songs, onPlaylistChange} ){
     padding-top: 150px;
     `;
     const Header = styled.h3`
+    font-size: 1.5em;
     font-family: "Lucida Console", "Courier New", monospace;
     `
 

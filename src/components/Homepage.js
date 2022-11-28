@@ -5,13 +5,12 @@ function Homepage(){
     const Background = styled.div`
     background: white;
     padding-top: 150px;
-    `
-
+    `;
     const Wrapper = styled.p`
     padding: 1em;
     background: lightgray;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
     font-family: "Courier New", monospace;
     font-weight: bold;
     `;

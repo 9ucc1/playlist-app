@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import '../App.css';
-import Header from "./Header.js"
 import { Route, Switch } from 'react-router-dom'
+import Header from "./Header.js"
 import Homepage from "./Homepage.js"
 import Library from './Library.js'
 import SongForm from './SongForm.js'
 import Playlist from './Playlist.js'
-
-//make an error route, page does not exist
 
 function App() {
 
@@ -28,10 +25,16 @@ function App() {
       )
   }
 
+  const updatedSongs = [...songs]
+
   function handleDeleteSong(deletedSong){
-    const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
+    //const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
+    updatedSongs.filter((song)=> song.id !== deletedSong.id)
     setSongs(updatedSongs)
+    //console.log("delete")
 }
+
+//destructive filter
 
 function handlePlaylistChange(changedSong){
   const updatedSongs = songs.map((song)=> {
@@ -56,7 +59,7 @@ function handlePlaylistChange(changedSong){
         </Route>
         <Route path="/songs">
           <Library 
-            songs={songs}
+            songs={updatedSongs}
             onDeleteSong={handleDeleteSong}
             onPlaylistChange={handlePlaylistChange}
           />

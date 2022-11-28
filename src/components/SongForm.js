@@ -13,11 +13,12 @@ function SongForm(){
     padding: 1em;
     background: white;
     `;
-    const FormHeader = styled.h1`
+    const FormHeader = styled.h3`
     font-size: 1.5em;
     text-align: center;
     color: black;
     padding-top: 150px;
+    font-family: "Lucida Console", "Courier New", monospace;
     `;
 
 const [newSong, setNewSong] = useState(initialNewSong)
@@ -53,7 +54,7 @@ function handleSubmit(event){
 
 return(
     <>
-    <FormHeader>new song</FormHeader>
+    <FormHeader>New Song</FormHeader>
     <form>
         <h3>Title: 
             <input 
