@@ -40,6 +40,11 @@ function Playlist(){
         )
     }
 
+    function handlePlaylistRemove(removedSong){
+        const updatedSongs = songs.filter((song)=> song.id !== removedSong.id)
+        console.log(updatedSongs)
+    }
+
     //const playlistSongs = songs.filter(song=>song.playlistStatus === true)
     
     return(
@@ -55,6 +60,7 @@ function Playlist(){
                     artist={song.artist}
                     image={song.image}
                     //playlistStatus={song.playlistStatus}
+                    onPlaylistChange={handlePlaylistRemove}
                     />
                 </Wrapper>
             ))}

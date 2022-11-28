@@ -13,7 +13,7 @@ function DeleteButton({song, onDeleteSong}){
         })
         .then(r=>r.json())
         .then(()=>onDeleteSong(song))
-        alert("song deleted!")
+        alert("song deleted from library!")
     }
 
     return <Button onClick={handleDelete}>Delete from Library</Button>

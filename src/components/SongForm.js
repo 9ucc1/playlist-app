@@ -38,7 +38,7 @@ function handleSubmit(event){
     const formData = { 
         title: newSong.title, 
         artist: newSong.artist, 
-        image: newSong.image = 'https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png', 
+        image: newSong.image, 
         playlistStatus: playlistStatus}
     fetch('http://localhost:3003/songs',{
         method: "POST",

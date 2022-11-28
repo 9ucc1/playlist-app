@@ -7,7 +7,8 @@ function Library(){
     const Background = styled.div`
     background: darksalmon;
     column-count: 2;
-    column-gap: 10px;
+    column-fill: balance;
+    column-gap: 1em;
     padding: 1em;
     padding-top: 150px;
     `
@@ -16,6 +17,7 @@ function Library(){
     background: white;
     border: solid;
     border-color: gray;
+    max-width: 500px;
   `;
 
     const [isLoaded, setIsLoaded] = useState(false)

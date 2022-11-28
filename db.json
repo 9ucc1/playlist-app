@@ -91,24 +91,17 @@
       "id": 15
     },
     {
-      "title": "song",
-      "artist": "artist",
+      "title": "Pink Venom",
+      "artist": "BLACKPINK",
       "image": "https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png",
       "playlistStatus": false,
-      "id": 16
-    },
-    {
-      "title": "hihihihi",
-      "artist": "w",
-      "image": "https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png",
-      "playlistStatus": true,
       "id": 17
     },
     {
-      "title": "try again",
-      "artist": "hi ",
-      "image": "https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/music-circle-blue-512.png",
-      "playlistStatus": false,
+      "title": "Pink Venom",
+      "artist": "BLACKPINK",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.XZRM8XX9rM1C3-7xc7DgOQAAAA&pid=Api",
+      "playlistStatus": true,
       "id": 18
     }
   ]
