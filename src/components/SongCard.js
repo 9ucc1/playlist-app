@@ -3,16 +3,9 @@ import styled from 'styled-components'
 
 function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemove }){
 
-    const Wrapper = styled.section`
-    padding: 4em;
-    background: lightgray;
-  `;
     const Columns = styled.div`
     column-count: 2;
     text-align: left;
-    `;
-    const Button = styled.button`
-    font-size: 12px;
     `;
 
     function handlePlaylistPatch(){
@@ -26,8 +19,12 @@ function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemo
         })
         .then((r)=>r.json())
         .then((changedSong)=>{
-            //onPlaylistChange(changedSong)
-            onPlaylistRemove(changedSong)
+                onPlaylistChange(changedSong)
+            /*if (changedSong.playlistStatus ===true){
+                onPlaylistChange(changedSong)
+            } else {
+                onPlaylistRemove(changedSong)
+            }*/
         })
     }
 
@@ -36,7 +33,9 @@ function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemo
             <img src={image}></img>
             <h3>{title}</h3>
             <p>{artist}</p>
-            <button onClick={handlePlaylistPatch}>{song.playlistStatus ? "Remove From" : "Add to"} Playlist</button>
+            <button onClick={handlePlaylistPatch}>
+                {song.playlistStatus ? "Remove From" : "Add to"} Playlist
+            </button>
         </Columns>
     )
 }

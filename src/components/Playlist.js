@@ -16,6 +16,7 @@ function Playlist( {songs, onPlaylistChange} ){
     const Background = styled.div`
     background: blanchedalmond;
     padding-top: 150px;
+    padding-bottom: 150px;
     `;
     const Header = styled.h3`
     font-size: 1.5em;
@@ -41,7 +42,7 @@ function Playlist( {songs, onPlaylistChange} ){
         )
     }
 
-    //const filteredSongs = songs.filter(song=>song.playlistStatus === true)
+    const filteredSongs = songs.filter(song=>song.playlistStatus === true)
     //const [playlistSongs, setPlaylistSongs] = useState(filteredSongs)
 
     function handlePlaylistRemove(changedSong){
@@ -55,7 +56,7 @@ function Playlist( {songs, onPlaylistChange} ){
     return(
         <Background>
             <Header>My Playlist</Header>
-            {playlistSongs.map(song=>(
+            {filteredSongs.map(song=>(
                 <Wrapper>
                     <SongCard 
                     song={song}
@@ -65,8 +66,8 @@ function Playlist( {songs, onPlaylistChange} ){
                     artist={song.artist}
                     image={song.image}
                     //playlistStatus={song.playlistStatus}
-                    //onPlaylistChange={onPlaylistChange}
-                    onPlaylistRemove={handlePlaylistRemove}
+                    onPlaylistChange={onPlaylistChange}
+                    //onPlaylistRemove={handlePlaylistRemove}
                     />
                 </Wrapper>
             ))}
