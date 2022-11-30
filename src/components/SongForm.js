@@ -7,7 +7,7 @@ const initialNewSong = {
     image: "",
 }
 
-function SongForm(){
+function SongForm({ onAddSong }){
 
     const Wrapper = styled.section`
     padding: 1em;
@@ -47,7 +47,7 @@ function handleSubmit(event){
         body: JSON.stringify(formData),
     })
     .then(r=>r.json())
-    .then(song=>console.log("posted:", song))
+    .then(song=>onAddSong(song))
     setNewSong(initialNewSong)
     alert("added song!")
 }

@@ -16,7 +16,7 @@ function DeleteButton({song, onDeleteSong}){
         alert("song deleted from library!")
     }
 
-    return <Button onClick={handleDelete}>Delete from Library</Button>
+    return <button onClick={handleDelete}>Delete from Library</button>
 }
 
 export default DeleteButton

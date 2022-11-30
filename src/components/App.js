@@ -25,13 +25,15 @@ function App() {
       )
   }
 
-  const updatedSongs = [...songs]
+  function handleAddSong(newSong){
+    setSongs([...songs, newSong])
+  }
 
   function handleDeleteSong(deletedSong){
-    //const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
-    updatedSongs.filter((song)=> song.id !== deletedSong.id)
+    console.log("deleted", deletedSong)
+    const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
     setSongs(updatedSongs)
-    //console.log("delete")
+    console.log("deleted2", deletedSong, updatedSongs, "h", songs)
 }
 
 //destructive filter
@@ -55,11 +57,11 @@ function handlePlaylistChange(changedSong){
       <Header />
       <Switch>
         <Route path="/songs/new">
-          <SongForm/>
+          <SongForm onAddSong={handleAddSong}/>
         </Route>
         <Route path="/songs">
           <Library 
-            songs={updatedSongs}
+            songs={songs}
             onDeleteSong={handleDeleteSong}
             onPlaylistChange={handlePlaylistChange}
           />

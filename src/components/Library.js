@@ -3,7 +3,7 @@ import SongCard from './SongCard.js'
 import DeleteButton from './DeleteButton.js'
 import styled from 'styled-components'
 
-function Library( { onDeleteSong, onPlaylistChange}){
+function Library( { songs, onDeleteSong, onPlaylistChange}){
     const Background = styled.div`
     background: darksalmon;
     column-count: 2;
@@ -19,7 +19,7 @@ function Library( { onDeleteSong, onPlaylistChange}){
     max-width: 400px;
   `;
 
-    const [isLoaded, setIsLoaded] = useState(false)
+    /*const [isLoaded, setIsLoaded] = useState(false)
     const [songs, setSongs] = useState([])
 
     useEffect(()=>{
@@ -34,7 +34,7 @@ function Library( { onDeleteSong, onPlaylistChange}){
         return(
             <p>Loading...</p>
         )
-    }
+    }*/
 
     /*function handleDeleteSong(deletedSong){
         const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
