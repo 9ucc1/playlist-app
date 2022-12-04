@@ -13,7 +13,7 @@ function SongForm({ onAddSong }){
     padding: 1em;
     background: white;
     `;
-    const FormHeader = styled.h3`
+    const FormHeader = styled.div`
     font-size: 1.5em;
     text-align: center;
     color: black;
