@@ -6,7 +6,7 @@ import Library from './Library.js'
 import SongForm from './SongForm.js'
 import Playlist from './Playlist.js'
 
-function App() {
+function App(){
 
   const [isLoaded, setIsLoaded] = useState(false)
   const [songs, setSongs] = useState([])
@@ -53,7 +53,9 @@ function App() {
       <Header/>
       <Switch>
         <Route path="/songs/new">
-          <SongForm onAddSong={handleAddSong}/>
+          <SongForm 
+            onAddSong={handleAddSong}
+          />
         </Route>
         <Route path="/songs">
           <Library 
