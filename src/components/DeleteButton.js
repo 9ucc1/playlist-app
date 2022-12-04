@@ -1,11 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 
 function DeleteButton({song, onDeleteSong}){
-
-    const Button = styled.button`
-    font-size: 12px
-    `
 
     function handleDelete(){
         fetch(`http://localhost:3003/songs/${song.id}`, {

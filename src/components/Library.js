@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import SongCard from './SongCard.js'
 import DeleteButton from './DeleteButton.js'
 import styled from 'styled-components'
 
-function Library( { songs, onDeleteSong, onPlaylistChange}){
+function Library({ songs, onDeleteSong, onPlaylistChange }){
     const Background = styled.div`
     background: darksalmon;
     column-count: 3;
@@ -21,30 +21,6 @@ function Library( { songs, onDeleteSong, onPlaylistChange}){
     border-color: gray;
     width: 350px;
   `;
-
-  //flexbox, table, styledcomponents columns
-
-    /*const [isLoaded, setIsLoaded] = useState(false)
-    const [songs, setSongs] = useState([])
-
-    useEffect(()=>{
-        fetch("http://localhost:3003/songs")
-        .then(response=>response.json())
-        .then(response=>{
-            setSongs(response)
-            setIsLoaded(true)
-        })
-    }, [])
-    if (!isLoaded){
-        return(
-            <p>Loading...</p>
-        )
-    }*/
-
-    /*function handleDeleteSong(deletedSong){
-        const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
-        setSongs(updatedSongs)
-    }*/
 
     return (
         <Background>

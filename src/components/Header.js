@@ -27,7 +27,7 @@ function Header(){
     return(
         <>
         <Header>
-        <Title>playlist builder 3000</Title>
+            <Title>playlist builder 3000</Title>
             <NavBar />
         </Header>
         </>

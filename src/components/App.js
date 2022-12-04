@@ -21,7 +21,7 @@ function App() {
   }, [])
   if (!isLoaded){
       return(
-          <p>Loading!!!</p>
+          <p>Loading...</p>
       )
   }
 
@@ -30,31 +30,27 @@ function App() {
   }
 
   function handleDeleteSong(deletedSong){
-    console.log("deleted", deletedSong)
     const updatedSongs = songs.filter((song)=> song.id !== deletedSong.id)
     setSongs(updatedSongs)
-    console.log("deleted2", deletedSong, updatedSongs, "h", songs)
-}
+  }
 
-//destructive filter
-
-function handlePlaylistChange(changedSong){
-  const updatedSongs = songs.map((song)=> {
-    if (song.id===changedSong.id){
-      return changedSong
-    } else {
-      return song
-    }
-  })
-  setSongs(updatedSongs)
-  if (changedSong.playlistStatus === false){
-    alert("removed from playlist!")
-  } else {alert("added to playlist")}
-}
+  function handlePlaylistChange(changedSong){
+    const updatedSongs = songs.map((song)=> {
+      if (song.id === changedSong.id){
+        return changedSong
+      } else {
+        return song
+      }
+    })
+    setSongs(updatedSongs)
+    if (changedSong.playlistStatus === false){
+      alert("removed from playlist!")
+    } else {alert("added to playlist!")}
+  }
 
   return (
     <div className="App">
-      <Header />
+      <Header/>
       <Switch>
         <Route path="/songs/new">
           <SongForm onAddSong={handleAddSong}/>

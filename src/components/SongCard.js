@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemove }){
+function SongCard({ song, title, artist, image, onPlaylistChange }){
 
     const Columns = styled.div`
     column-count: 2;
@@ -9,7 +9,6 @@ function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemo
     `;
 
     function handlePlaylistPatch(){
-        console.log("clicked")
         fetch(`http://localhost:3003/songs/${song.id}`,{
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
@@ -19,12 +18,7 @@ function SongCard({ song, title, artist, image, onPlaylistChange, onPlaylistRemo
         })
         .then((r)=>r.json())
         .then((changedSong)=>{
-                onPlaylistChange(changedSong)
-            /*if (changedSong.playlistStatus ===true){
-                onPlaylistChange(changedSong)
-            } else {
-                onPlaylistRemove(changedSong)
-            }*/
+            onPlaylistChange(changedSong)
         })
     }
 
