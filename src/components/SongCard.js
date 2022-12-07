@@ -28,7 +28,7 @@ function SongCard({ song, title, artist, image, onPlaylistChange }){
             <h3>{title}</h3>
             <p>{artist}</p>
             <button onClick={handlePlaylistPatch}>
-                {song.playlistStatus ? "Remove From" : "Add to"} Playlist
+                {song.playlistStatus ? "Remove from" : "Add to"} Playlist
             </button>
         </Columns>
     )

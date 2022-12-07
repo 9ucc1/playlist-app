@@ -49,6 +49,7 @@ function SongForm({ onAddSong }){
         .then(r=>r.json())
         .then(song=>onAddSong(song))
         setNewSong(initialNewSong)
+        setPlaylistStatus(false)
         alert("added song!")
     }
 
