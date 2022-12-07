@@ -5,7 +5,6 @@ import Homepage from "./Homepage.js"
 import Library from './Library.js'
 import SongForm from './SongForm.js'
 import Playlist from './Playlist.js'
-import Count from './Count.js'
 
 function App(){
   
@@ -52,7 +51,6 @@ function App(){
 
   return (
     <div className="App">
-      <Count/>
       <Header/>
       <Switch>
         <Route path="/songs/new">

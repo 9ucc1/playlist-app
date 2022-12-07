@@ -19,9 +19,7 @@ Running 'npm run server' runs the server at [http://localhost:3003](http://local
 
 Images for songs are credited to corresponding artist of the song. Images were pulled from Google Images.
 
-## License
-
-MIT License
+## MIT License
 
 Copyright (c) 2022 Gucci Fan
 
