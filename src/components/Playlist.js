@@ -22,7 +22,7 @@ function Playlist({ songs, onPlaylistChange }){
         font-size: 1.5em;
         font-family: "Lucida Console", "Courier New", monospace;
     `;
-
+    
     const filteredSongs = songs.filter(song=>song.playlistStatus === true)
     
     return(

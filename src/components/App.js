@@ -7,7 +7,7 @@ import SongForm from './SongForm.js'
 import Playlist from './Playlist.js'
 
 function App(){
-
+  
   const [isLoaded, setIsLoaded] = useState(false)
   const [songs, setSongs] = useState([])
 
@@ -19,6 +19,7 @@ function App(){
           setIsLoaded(true)
       })
   }, [])
+  
   if (!isLoaded){
       return(
           <p>Loading...</p>
