@@ -12,8 +12,9 @@ The user is also able to delete songs from the library and/or playlist.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The app utilizes JavaScript, React.js, JSX, HTML, and CSS. Styled-components was used for styling within components.
 
-Running 'npm start' runs the app at [http://localhost:3000](http://localhost:3000).
+To install packages, run 'npm install'
 Running 'npm run server' runs the server at [http://localhost:3003](http://localhost:3003).
+Running 'npm start' runs the app at [http://localhost:3000](http://localhost:3000).
 
 ## Sources
 
