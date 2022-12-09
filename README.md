@@ -12,9 +12,23 @@ The user is also able to delete songs from the library and/or playlist.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). The app utilizes JavaScript, React.js, JSX, HTML, and CSS. Styled-components was used for styling within components.
 
-To install packages, run 'npm install'
+## Installation
+
+To run the app locally, clone the code into your machine with 'git clone'.
+
+To install packages, run 'npm install'.
+
 Running 'npm run server' runs the server at [http://localhost:3003](http://localhost:3003).
+
 Running 'npm start' runs the app at [http://localhost:3000](http://localhost:3000).
+
+## Future Direction
+
+To improve this project in the future, a sort/filter function or search bar could be added in the music library. Styling-wise, functionality could be implemented to toggle visual appearance of the playlist, making it more customizable.
+
+## Authors and Acknowledgement
+
+This project was completed by Gucci Fan for the Software Engineering course at Flatiron School.
 
 ## Sources
 

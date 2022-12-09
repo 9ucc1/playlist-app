@@ -51,7 +51,6 @@ function App(){
 
   return (
     <div className="App">
-      <Count/>
       <Header/>
       <Switch>
         <Route path="/songs/new">
