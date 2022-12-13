@@ -24,6 +24,7 @@ function Library({ songs, onDeleteSong, onPlaylistChange }){
     `;
 
     return (
+        <>
         <Background>
             {songs.map(song=>
             (<Wrapper>
@@ -43,6 +44,52 @@ function Library({ songs, onDeleteSong, onPlaylistChange }){
             </Wrapper>
             ))}
         </Background>
+        </>
     )
 }
 export default Library
+
+/*
+            <input type="text" onChange={handleSearch} value={search}/>
+
+    const [filterList, setFilterList] = useState(songs)
+    const [search, setSearch] = useState("")
+
+    function handleSearch(event){
+        setSearch(event.target.value)
+        console.log(search)
+        if (event.target.value === ""){
+            setFilterList(songs)
+        } else {
+            const searchedValues = songs.filter((song) =>
+                song.title.toLowerCase().includes(event.target.value.toLowerCase())
+            )
+                setFilterList(searchedValues)
+        }
+    }
+
+
+    function Timer(){
+
+    let timer
+
+    useEffect(() => {
+        timer = setInterval(()=>{
+            setSeconds(seconds + 1);
+            if (seconds ===59){
+                setMinutes(minutes+1)
+                setSeconds(0)
+            }
+    }, 1000)
+        return () => clearInterval(timer)
+    })
+
+    const [seconds, setSeconds] = useState(0)
+    const [minutes, setMinutes] = useState(0)
+
+    return (
+        <div>{minutes<10 ? "0"+minutes : minutes}:{seconds<10 ? "0"+seconds : seconds}</div>
+    )
+}
+
+*/
